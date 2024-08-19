@@ -1,0 +1,15 @@
+server:
+    port: 8080
+    servlet:
+        context-path: /apis
+spring:
+    kafka:
+        properties:
+            session.timeout.ms: 60000
+        listener:
+            missing-topics-fatal: false
+            ack-mode: manual_immediate
+
+noise:
+    localusername: tuofengkeji
+    localpassword: 1qaz@WSX3edc
