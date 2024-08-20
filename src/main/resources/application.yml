@@ -1,11 +1,10 @@
 server:
-    port: 8080
+    port: 30405
     servlet:
         context-path: /apis
 spring:
     kafka:
-        properties:
-            session.timeout.ms: 60000
+        bootstrap-servers: localhost:9092
         listener:
             missing-topics-fatal: false
             ack-mode: manual_immediate

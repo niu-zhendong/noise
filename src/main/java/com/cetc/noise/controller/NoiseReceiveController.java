@@ -37,7 +37,7 @@ public class NoiseReceiveController {
         if(username != null && password != null){
             if (username.equals(localuser.getLocalusername()) && password.equals(localuser.getLocalpassword())) {
                 Date now = new Date();
-                Date expiration = new Date(now.getTime() + 5*6000);
+                Date expiration = new Date(now.getTime() + (24*60*60*1000));
                 res.put("status",200);
                 res.put("token",TokenUtil.createToken(username,password,expiration));
                 res.put("expiration",expiration.getTime());
